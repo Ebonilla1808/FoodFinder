@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FoodFinder</string>
+    <string name="logo_description">Logo de la aplicación</string>
+    <string name="saludo">¡Hola!</string>
+    <string name="info_saludo">¿Pensando en dónde comer? ¡Nosotros tenemos las mejores sugerencias para ti!</string>
+    <string name="saludo_entrar">Comencemos...</string>
 </resources>
