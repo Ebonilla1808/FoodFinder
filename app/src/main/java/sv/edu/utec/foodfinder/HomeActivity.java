@@ -6,17 +6,19 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class HomeActivity extends AppCompatActivity {
 
-    LinearLayout btnCafe;
+    ImageView btnCafe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        btnCafe = findViewById(R.id.op_cafe);
+        btnCafe = findViewById(R.id.image_coffe);
 
         btnCafe.setOnClickListener(new View.OnClickListener() {
             @Override
