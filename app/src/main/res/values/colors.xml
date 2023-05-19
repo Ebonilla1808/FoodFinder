@@ -13,4 +13,5 @@
     <color name="brown_acent">#270D05</color>
     <color name="orange_text">#872000</color>
     <color name="brown_ligth">#471506</color>
+    <color name="color_inputText">#B4FFFFFF</color>
 </resources>
