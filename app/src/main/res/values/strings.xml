@@ -3,5 +3,5 @@
     <string name="logo_description">Logo de la aplicación</string>
     <string name="saludo">¡Hola!</string>
     <string name="info_saludo">¿Pensando en dónde comer? ¡Nosotros tenemos las mejores sugerencias para ti!</string>
-    <string name="saludo_entrar">Comencemos...</string>
+    <string name="saludoEntrar">Comencemos...</string>
 </resources>
