@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".HomeActivity">
+    <!-- Botón de Cerrar sesión -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+             <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+             </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ff_logo_light" />
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="¿Qué se te apetece hoy?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="3"
+            android:textAlignment="center">
+
+            <!-- Celda 1 -->
+            <LinearLayout
+                android:id="@+id/op_cafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/coffe_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Cafeterías"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!-- Celda 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/fastfood_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Comida rápida"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Celda 3 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/seafood_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Mariscos"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Celda 4 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/comida_tipica_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Comida típica"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!-- Celda 5 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/buffet_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Buffets"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Celda 6 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/semicicle_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/heladeria_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_inputText"
+                    android:fontFamily="@font/merienda_one"
+                    android:text="Heladerías"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merienda_one"
+            android:text="Selecciona la opción de tu preferencia"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
