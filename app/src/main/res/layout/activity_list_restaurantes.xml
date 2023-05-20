@@ -77,7 +77,7 @@
                     android:textColor="@color/brown_text"
                     android:textSize="20sp" />
             </LinearLayout>
-            
+
         </GridLayout>
 
         <TextView
@@ -95,4 +95,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
