@@ -68,6 +68,7 @@
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:clickable="true"
+                    android:contentDescription="Logo de cafe"
                     android:src="@drawable/coffe_icon" />
 
                 <TextView

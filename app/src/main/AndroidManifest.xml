@@ -15,7 +15,7 @@
             android:name=".RestauranteUbicaciones"
             android:exported="false" />
         <activity
-            android:name=".RestauranteContacto"
+            android:name=".RestauranteContactoActivity"
             android:exported="false" />
         <activity
             android:name=".RestauranteMainActivity"
