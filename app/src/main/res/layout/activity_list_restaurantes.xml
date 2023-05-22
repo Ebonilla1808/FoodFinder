@@ -7,92 +7,86 @@
     android:background="@drawable/fondo2"
     tools:context=".ListRestaurantesActivity">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="horizontal">
-
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
 
-            <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 app:srcCompat="@drawable/ff_logo_light" />
-        </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="Encontramos los siguientes restaurantes para ti: "
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+            <EditText
+                android:id="@+id/edtEspecialidad"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="10dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/brown_ligth"
+                android:ems="10"
+                android:fontFamily="@font/merienda_one"
+                android:hint="Ingrese la especialidad de preferencia"
+                android:background="@color/color_inputText"
+                android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/edtMunicipio"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="10dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/brown_ligth"
+                android:ems="10"
+                android:fontFamily="@font/merienda_one"
+                android:hint="Ingrese el municipio de preferencia"
+                android:background="@color/color_inputText"
+                android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/merienda_one"
-            android:text="Encontramos los siguientes restaurantes para ti: "
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvwListaRestaurantes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
 
-        <GridLayout
-            android:id="@+id/grid_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:textAlignment="center">
-
-            <!-- Celda 1 -->
-            <LinearLayout
-                android:id="@+id/op_cafe"
+            <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/semicicle_background"
-                android:orientation="vertical"
-                android:clickable="true">
-
-                <ImageView
-                    android:layout_width="190dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/coffe_icon" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_inputText"
-                    android:fontFamily="@font/merienda_one"
-                    android:text="Cafeterías"
-                    android:textAlignment="center"
-                    android:textColor="@color/brown_text"
-                    android:textSize="20sp" />
-            </LinearLayout>
-        </GridLayout>
-        
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/merienda_one"
-            android:text="Selecciona el restaurante de tu preferencia"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-
+                android:fontFamily="@font/merienda_one"
+                android:text="Selecciona el restaurante de tu preferencia"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
