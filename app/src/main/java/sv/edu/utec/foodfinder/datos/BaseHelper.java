@@ -18,8 +18,10 @@ public class BaseHelper extends SQLiteOpenHelper {
     public static final String NOMBRE_TABLA_RESTAURANTES = "Restaurantes";
     public static final String NOMBRE_TABLA_COMENTARIOS = "Comentarios";
 
+    protected     Context context;
     public BaseHelper(@Nullable Context context) {
         super(context, NOMBRE_BASE, null, VERSION_BASEDATOS);
+        this.context =context;
     }
 
     @Override

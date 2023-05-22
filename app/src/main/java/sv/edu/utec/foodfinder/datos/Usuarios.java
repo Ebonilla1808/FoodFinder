@@ -13,11 +13,9 @@ import sv.edu.utec.foodfinder.entidades.EntUsuarios;
 
 public class Usuarios extends BaseHelper {
 
-    Context context;
-
     public Usuarios(@Nullable Context context) {
         super(context);
-        this.context = context;
+        //this.context = context;
     }
 
     /*

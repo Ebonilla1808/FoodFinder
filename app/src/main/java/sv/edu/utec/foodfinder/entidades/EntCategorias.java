@@ -1,22 +1,22 @@
 package sv.edu.utec.foodfinder.entidades;
 
 public class EntCategorias {
-    private int id_categoria;
-    private String descripcion;
+    private int IdCategoria;
+    private String Descripcion;
 
-    public int getId_categoria() {
-        return id_categoria;
+    public int getIdCategoria() {
+        return IdCategoria;
     }
 
-    public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
+    public void setIdCtegoria(int id_categoria) {
+        this.IdCategoria = id_categoria;
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return Descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.Descripcion = descripcion;
     }
 }

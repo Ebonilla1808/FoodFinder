@@ -65,9 +65,9 @@
 
                 <ImageView
                     android:id="@+id/image_coffe"
+                    android:clickable="true"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
-                    android:clickable="true"
                     android:contentDescription="Logo de cafe"
                     android:src="@drawable/coffe_icon" />
 
@@ -85,13 +85,18 @@
 
             <!-- Celda 2 -->
             <LinearLayout
+                android:id="@+id/op_fastfood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/semicicle_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/image_fast"
+                    android:clickable="true"
+                    android:contentDescription="Logo de comida rapida"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:src="@drawable/fastfood_icon" />
@@ -109,13 +114,18 @@
 
             <!-- Celda 3 -->
             <LinearLayout
+                android:id="@+id/op_mariscos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/semicicle_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/image_mariscos"
+                    android:clickable="true"
+                    android:contentDescription="Logo de mariscos"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:src="@drawable/seafood_icon" />
@@ -133,13 +143,18 @@
 
             <!-- Celda 4 -->
             <LinearLayout
+                android:id="@+id/op_tipicos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/semicicle_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/image_tipico"
+                    android:clickable="true"
+                    android:contentDescription="Logo de comida tipica"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:src="@drawable/comida_tipica_icon" />
@@ -158,13 +173,18 @@
 
             <!-- Celda 5 -->
             <LinearLayout
+                android:id="@+id/op_buffets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/semicicle_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/image_buffets"
+                    android:clickable="true"
+                    android:contentDescription="Logo de buffets"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:src="@drawable/buffet_icon" />
@@ -182,13 +202,18 @@
 
             <!-- Celda 6 -->
             <LinearLayout
+                android:id="@+id/op_heladerias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/semicicle_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:clickable="true">
 
                 <ImageView
+                    android:id="@+id/image_heladerias"
+                    android:clickable="true"
+                    android:contentDescription="Logo de heladerias"
                     android:layout_width="190dp"
                     android:layout_height="100dp"
                     android:src="@drawable/heladeria_icon" />

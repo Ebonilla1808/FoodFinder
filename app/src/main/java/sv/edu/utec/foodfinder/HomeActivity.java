@@ -23,7 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         btnCafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ListRestaurantesActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ListRestaurantesActivity.class);
+                intent.putExtra("idCategoria", 1);
+                startActivity(intent);
             }
         });
     }
