@@ -1,76 +1,76 @@
 package sv.edu.utec.foodfinder.entidades;
 
 public class EntUsuarios {
-    private int id_usuario;
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private String telefono;
-    private String nombre_usuario;
-    private String contrasenia;
-    private int tipo_usuario;
+    private int IdUsuario;
+    private String Nombre;
+    private String Apellido;
+    private String Correo;
+    private String Telefono;
+    private String NombreUsuario;
+    private String Contraseña;
+    private String TipoUsuario;
 
-    public int getId_usuario() {
-        return id_usuario;
+    public int getIdUsuario() {
+        return IdUsuario;
     }
 
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setIdUsuario(int idUsuario) {
+        IdUsuario = idUsuario;
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        Nombre = nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        Apellido = apellido;
     }
 
     public String getCorreo() {
-        return correo;
+        return Correo;
     }
 
     public void setCorreo(String correo) {
-        this.correo = correo;
+        Correo = correo;
     }
 
     public String getTelefono() {
-        return telefono;
+        return Telefono;
     }
 
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
+        Telefono = telefono;
     }
 
-    public String getNombre_usuario() {
-        return nombre_usuario;
+    public String getNombreUsuario() {
+        return NombreUsuario;
     }
 
-    public void setNombre_usuario(String nombre_usuario) {
-        this.nombre_usuario = nombre_usuario;
+    public void setNombreUsuario(String nombreUsuario) {
+        NombreUsuario = nombreUsuario;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getContraseña() {
+        return Contraseña;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setContraseña(String contraseña) {
+        Contraseña = contraseña;
     }
 
-    public int getTipo_usuario() {
-        return tipo_usuario;
+    public String getTipoUsuario() {
+        return TipoUsuario;
     }
 
-    public void setTipo_usuario(int tipo_usuario) {
-        this.tipo_usuario = tipo_usuario;
+    public void setTipoUsuario(String tipoUsuario) {
+        TipoUsuario = tipoUsuario;
     }
 }
