@@ -37,34 +37,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/merienda_one"
+                android:textSize="24sp"
                 android:text="Encontramos los siguientes restaurantes para ti: "
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-            <EditText
-                android:id="@+id/edtEspecialidad"
+                android:textColor="@color/white" />
+
+
+            <SearchView
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:id="@+id/txtBusqueda"
                 android:paddingLeft="20dp"
                 android:textColor="@color/brown_ligth"
-                android:ems="10"
                 android:fontFamily="@font/merienda_one"
-                android:hint="Ingrese la especialidad de preferencia"
+                android:hint="Ingrese un valor para filtrar"
                 android:background="@color/color_inputText"
-                android:inputType="textPersonName" />
-            <EditText
-                android:id="@+id/edtMunicipio"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_margin="10dp"
-                android:paddingLeft="20dp"
-                android:textColor="@color/brown_ligth"
-                android:ems="10"
-                android:fontFamily="@font/merienda_one"
-                android:hint="Ingrese el municipio de preferencia"
-                android:background="@color/color_inputText"
-                android:inputType="textPersonName" />
+
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvwListaRestaurantes"

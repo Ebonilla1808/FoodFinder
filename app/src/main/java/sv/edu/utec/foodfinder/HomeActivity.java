@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
+
         btnTipico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
