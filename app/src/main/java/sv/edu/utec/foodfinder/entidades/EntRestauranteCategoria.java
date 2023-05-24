@@ -1,6 +1,6 @@
-package sv.edu.utec.foodfinder.ViewModel;
+package sv.edu.utec.foodfinder.entidades;
 
-public class RestaurantesViewModel {
+public class EntRestauranteCategoria {
     private int IdRestaurante;
     private int IdCategoria;
     private int IdEspecialidad;

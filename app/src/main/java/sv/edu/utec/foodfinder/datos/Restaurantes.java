@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-import sv.edu.utec.foodfinder.ViewModel.RestaurantesViewModel;
+import sv.edu.utec.foodfinder.entidades.EntRestauranteCategoria;
 
 public class Restaurantes extends BaseHelper{
     public Restaurantes(@Nullable Context context) {
@@ -16,17 +16,17 @@ public class Restaurantes extends BaseHelper{
     }
 
 
-    public ArrayList<RestaurantesViewModel> obtenerListaRestaurantes(int idCategoria) {
+    public ArrayList<EntRestauranteCategoria> obtenerListaRestaurantes(int idCategoria) {
         BaseHelper baseHelp = new BaseHelper(context);
         SQLiteDatabase bd = baseHelp.getWritableDatabase();
-        ArrayList<RestaurantesViewModel> listaRestaurantes = new ArrayList<>();
-        RestaurantesViewModel restaurante = null;
+        ArrayList<EntRestauranteCategoria> listaRestaurantes = new ArrayList<>();
+        EntRestauranteCategoria restaurante = null;
         Cursor cursorUsuarios;
 
         String consulta = "SELECT r.IdRestaurante, r.NombreRestaurante, " +
                 "(r.DiasAtencion || ' de ' || r.HoraApertura || ' a ' || r.HoraCierre) as Horario, " +
                 "r.Contacto, m.NombreMunicipio, c.DescripcionCategoria, e.DescripcionEspecialidad, " +
-                "c.IdCategoria, e.IdEspecialidad, m.IdMunicipio "+
+                "c.IdCategoria, e.IdEspecialidad, m.IdMunicipio, r.SitioWeb "+
                 "FROM Restaurantes r " +
                 "INNER JOIN Categorias c ON c.IdCategoria = r.IdCategoria " +
                 "INNER JOIN Especialidades e ON e.IdEspecialidad = r.IdEspecialidad " +
@@ -37,7 +37,7 @@ public class Restaurantes extends BaseHelper{
 
         if (cursorUsuarios.moveToFirst()) {
             do {
-                restaurante = new RestaurantesViewModel();
+                restaurante = new EntRestauranteCategoria();
                 restaurante.setIdRestaurante(cursorUsuarios.getInt(0));
                 restaurante.setNombreRestaurante(cursorUsuarios.getString(1));
                 restaurante.setHorario(cursorUsuarios.getString(2));
@@ -48,6 +48,7 @@ public class Restaurantes extends BaseHelper{
                 restaurante.setIdCategoria(cursorUsuarios.getInt(7));
                 restaurante.setIdEspecialidad(cursorUsuarios.getInt(8));
                 restaurante.setIdMunicipio(cursorUsuarios.getInt(9));
+                restaurante.setSitioWeb(cursorUsuarios.getString(10));
                 listaRestaurantes.add(restaurante);
             } while (cursorUsuarios.moveToNext());
         }
