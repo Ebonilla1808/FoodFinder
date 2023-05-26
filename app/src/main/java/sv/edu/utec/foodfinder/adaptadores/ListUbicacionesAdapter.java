@@ -1,9 +1,14 @@
 package sv.edu.utec.foodfinder.adaptadores;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,7 +26,10 @@ public class ListUbicacionesAdapter
     private ArrayList<EntRestauranteCategoria> ubicacionesListOriginal;
     private View.OnClickListener listener;
 
-    public ListUbicacionesAdapter(ArrayList<EntRestauranteCategoria> ubicacionesList) {
+    Context context;
+
+    public ListUbicacionesAdapter(ArrayList<EntRestauranteCategoria> ubicacionesList, Context context) {
+        this.context = context;
         this.ubicacionesList = ubicacionesList;
         ubicacionesListOriginal = new ArrayList<>();
         ubicacionesListOriginal.addAll(ubicacionesList);
@@ -57,6 +65,30 @@ public class ListUbicacionesAdapter
         holder.viewContacto.setText("Numero de telefono: " + restaurante.getContacto());
         holder.viewWebSite.setText("Sitio web: "+ restaurante.getSitioWeb());
 
+
+        holder.imgSitioWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+
+                }catch (Exception ex){
+                    Toast.makeText(context, "No se encontró un navegador para abrir el sitio", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
+        holder.imgLlamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+ restaurante.getContacto()));
+                    context.startActivity(intent);
+                }catch (Exception ex){
+                    Toast.makeText(context, "No se encontró una app para realizar la llamada", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
     }
 
     @Override
@@ -67,11 +99,14 @@ public class ListUbicacionesAdapter
     public class RestaurantesViewHolder extends RecyclerView.ViewHolder {
 
         TextView viewUbicacion, viewContacto, viewWebSite;
+        ImageView imgSitioWeb, imgLlamar;
         public RestaurantesViewHolder(@NonNull View itemView) {
             super(itemView);
             viewUbicacion = itemView.findViewById(R.id.tvUbicacion);
             viewContacto = itemView.findViewById(R.id.tvContacto);
             viewWebSite = itemView.findViewById(R.id.tvSitioWeb);
+            imgSitioWeb = itemView.findViewById(R.id.imgWebSite);
+            imgLlamar = itemView.findViewById(R.id.imgLlamar);
         }
     }
 }

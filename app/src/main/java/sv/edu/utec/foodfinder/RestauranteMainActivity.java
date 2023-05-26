@@ -38,7 +38,7 @@ public class RestauranteMainActivity extends AppCompatActivity {
         AlistRestaurantes=new ArrayList<>();
         AlistRestaurantes = dbRestaurantes.obtenerRestauranteNombre(nombreRestaurante, nombreMunicipio);
 
-        adapter =new ListUbicacionesAdapter(AlistRestaurantes);
+        adapter =new ListUbicacionesAdapter(AlistRestaurantes, this);
 
         txtNombreRes.setText(nombreRestaurante);
         rcwListUbicaciones.setAdapter(adapter);
