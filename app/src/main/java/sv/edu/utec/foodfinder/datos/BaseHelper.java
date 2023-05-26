@@ -62,13 +62,13 @@ public class BaseHelper extends SQLiteOpenHelper {
                 "IdRestaurante INTEGER PRIMARY KEY AUTOINCREMENT ," +
                 "IdEspecialidad INTEGER ," +
                 "IdCategoria INTEGER ," +
-                "NombreRestaurante, "+
+                "NombreRestaurante TEXT, "+
                 "SitioWeb TEXT," +
                 "IdMunicipio INTEGER ," +
                 "HoraApertura TEXT," +
                 "HoraCierre TEXT," +
                 "DiasAtencion TEXT," +
-                "Contacto TEXT" +
+                "Contacto TEXT, Ubicacion TEXT" +
                 ")");
 
         db.execSQL("CREATE TABLE " + NOMBRE_TABLA_COMENTARIOS + " (" +

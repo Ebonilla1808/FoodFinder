@@ -16,9 +16,13 @@ import java.util.stream.Collectors;
 import sv.edu.utec.foodfinder.R;
 import sv.edu.utec.foodfinder.entidades.EntRestauranteCategoria;
 
-public class ListRestauranteAdapter extends  RecyclerView.Adapter<ListRestauranteAdapter.RestaurantesViewHolder> {
+public class ListRestauranteAdapter
+        extends  RecyclerView.Adapter<ListRestauranteAdapter.RestaurantesViewHolder>
+        implements View.OnClickListener
+{
     private ArrayList<EntRestauranteCategoria> restaurantesList;
     private ArrayList<EntRestauranteCategoria> restaurantesListOriginal;
+    private View.OnClickListener listener;
 
     public ListRestauranteAdapter(ArrayList<EntRestauranteCategoria> restaurantesList) {
         this.restaurantesList = restaurantesList;
@@ -31,6 +35,9 @@ public class ListRestauranteAdapter extends  RecyclerView.Adapter<ListRestaurant
     public RestaurantesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         try {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista_restaurante, null, false);
+
+            view.setOnClickListener(this);
+
             return new RestaurantesViewHolder(view);
         }
         catch (Exception ex){
@@ -93,6 +100,18 @@ public class ListRestauranteAdapter extends  RecyclerView.Adapter<ListRestaurant
     @Override
     public int getItemCount() {
         return restaurantesList.size();
+    }
+
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(listener != null){
+            listener.onClick(view);
+        }
     }
 
     public class RestaurantesViewHolder extends RecyclerView.ViewHolder {

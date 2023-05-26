@@ -13,6 +13,7 @@ public class EntRestauranteCategoria {
     private String DescripcionCategoria;
     private String DescripcionEspecialidad;
 
+    private String Ubicacion;
 
     public int getIdRestaurante() {
         return IdRestaurante;
@@ -100,5 +101,13 @@ public class EntRestauranteCategoria {
 
     public void setDescripcionEspecialidad(String descripcionEspecialidad) {
         DescripcionEspecialidad = descripcionEspecialidad;
+    }
+
+    public String getUbicacion() {
+        return Ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        Ubicacion = ubicacion;
     }
 }
