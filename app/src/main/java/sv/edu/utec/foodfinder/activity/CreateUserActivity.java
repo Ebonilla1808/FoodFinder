@@ -1,4 +1,4 @@
-package sv.edu.utec.foodfinder;
+package sv.edu.utec.foodfinder.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import sv.edu.utec.foodfinder.R;
 import sv.edu.utec.foodfinder.datos.Usuarios;
 
 public class CreateUserActivity extends AppCompatActivity {

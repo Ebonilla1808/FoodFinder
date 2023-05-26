@@ -1,8 +1,10 @@
-package sv.edu.utec.foodfinder;
+package sv.edu.utec.foodfinder.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import sv.edu.utec.foodfinder.R;
 
 public class RestauranteContactoActivity extends AppCompatActivity {
 

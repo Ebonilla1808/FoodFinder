@@ -1,4 +1,4 @@
-package sv.edu.utec.foodfinder;
+package sv.edu.utec.foodfinder.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import sv.edu.utec.foodfinder.R;
 import sv.edu.utec.foodfinder.adaptadores.ListRestauranteAdapter;
 import sv.edu.utec.foodfinder.adaptadores.ListUbicacionesAdapter;
 import sv.edu.utec.foodfinder.datos.Restaurantes;

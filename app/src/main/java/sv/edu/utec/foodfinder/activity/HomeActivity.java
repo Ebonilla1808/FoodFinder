@@ -1,14 +1,13 @@
-package sv.edu.utec.foodfinder;
+package sv.edu.utec.foodfinder.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import sv.edu.utec.foodfinder.R;
 
 public class HomeActivity extends AppCompatActivity {
 
