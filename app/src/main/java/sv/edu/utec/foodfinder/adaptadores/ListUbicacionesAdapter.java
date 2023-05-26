@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 import sv.edu.utec.foodfinder.R;
@@ -70,6 +71,10 @@ public class ListUbicacionesAdapter
             @Override
             public void onClick(View v) {
                 try{
+                    Uri link =  Uri.parse("https://"+restaurante.getSitioWeb());
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW, link);
+                    context.startActivity(intent);
 
                 }catch (Exception ex){
                     Toast.makeText(context, "No se encontró un navegador para abrir el sitio", Toast.LENGTH_LONG).show();
