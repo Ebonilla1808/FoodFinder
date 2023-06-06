@@ -15,7 +15,6 @@ public class Restaurantes extends BaseHelper{
         super(context);
     }
 
-
     public ArrayList<EntRestauranteCategoria> obtenerListaRestaurantes(int idCategoria) {
         BaseHelper baseHelp = new BaseHelper(context);
         SQLiteDatabase bd = baseHelp.getWritableDatabase();
@@ -55,10 +54,6 @@ public class Restaurantes extends BaseHelper{
         cursorUsuarios.close();
         return listaRestaurantes;
     }
-
-
-
-
 
     public ArrayList<EntRestauranteCategoria> obtenerRestauranteNombre(String nombreRestaurante, String nombreMunicipio) {
         BaseHelper baseHelp = new BaseHelper(context);
